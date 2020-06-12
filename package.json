@@ -5,7 +5,8 @@
   "main": "src",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server"
   },
   "author": "Jeff Wong",
   "license": "ISC",
