@@ -26,7 +26,11 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({ template: resolve(__dirname, "public/index.html") })
-  ]
+  ],
+  devServer: {
+    compress: true,
+    port: 3000
+  }
 };
 
 export default config;
