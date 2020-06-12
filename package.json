@@ -6,11 +6,13 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack --mode production",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "server": "npm run build && node server.js"
   },
   "author": "Jeff Wong",
   "license": "ISC",
   "dependencies": {
+    "cors": "2.8.5",
     "express": "4.17.1",
     "react": "16.13.1",
     "react-dom": "16.13.1"
