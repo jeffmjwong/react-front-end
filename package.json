@@ -4,10 +4,11 @@
   "description": "",
   "main": "src",
   "scripts": {
+    "start": "npm run prod",
     "clean": "rimraf dist",
-    "build": "webpack --mode production",
+    "build": "npm run clean && webpack --mode production",
     "dev": "webpack-dev-server",
-    "server": "npm run build && node server.js"
+    "prod": "NODE_ENV=production npm run build && node server.js"
   },
   "author": "Jeff Wong",
   "license": "ISC",
