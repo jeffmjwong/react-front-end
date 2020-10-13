@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
 
 const App = () => {
-  const [users, setUsers] = useState([]);
+  const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetch("http://jeffs.xyz:11002/a")
+    fetch("http://127.0.0.1:3000/a")
       .then(res => res.json())
-      .then(data => setUsers(data))
+      .then(data => setCars(data))
       .catch(err => console.log(`Something went wrong! ${err}`))
   }, []);
 
   return (
     <div>
       <h2>Hello world!</h2>
-      {users.map(user => (
+      {cars.map(car => (
         <div>
-          Id: {user.id}, Name: {user.name}
+          <p>
+            {car.id} - {car.name}, {car.price}
+          </p>
         </div>
       ))}
     </div>
