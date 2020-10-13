@@ -16,8 +16,8 @@ USER jeff
 
 WORKDIR /app
 
-COPY --from=build /app-build/dist/bundle.js .
+COPY --from=build /app-build/dist ./dist
 
-EXPOSE 3000
+EXPOSE 3001
 
-CMD ["node", "bundle"]
+CMD ["node", "dist/server"]
