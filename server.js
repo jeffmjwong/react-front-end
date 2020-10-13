@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const port = 80;
+const port = 3001;
 
 app.use(express.static(path.resolve("dist", "www")));
 
