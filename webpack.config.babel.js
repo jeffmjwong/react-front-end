@@ -1,11 +1,12 @@
 import { resolve } from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
-const config = {
+const frontConfig = {
   entry: "./src",
   mode: "development",
+  target: "web",
   output: {
-    path: resolve(__dirname, "dist"),
+    path: resolve("dist", "www"),
     filename: "bundle.js"
   },
   module: {
@@ -33,4 +34,14 @@ const config = {
   }
 };
 
-export default config;
+const backConfig = {
+  entry: "./server.js",
+  mode: "development",
+  target: "node",
+  output: {
+    path: resolve("dist"),
+    filename: "server.js"
+  }
+};
+
+export default [frontConfig, backConfig];
