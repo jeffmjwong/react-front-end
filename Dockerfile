@@ -10,9 +10,9 @@ RUN npm run build
 
 FROM node:12.19.0-alpine3.12
 
-RUN adduser -D jeff
+# RUN adduser -D jeff
 
-USER jeff
+# USER jeff
 
 WORKDIR /app
 
