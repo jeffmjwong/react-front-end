@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  web:
+    image: "jeffw0317/react-web:v1"
+    container_name: web
+    ports:
+      - "80:3001"
+  api:
+    image: "jeffw0317/node-server:v1"
+    container_name: api
+    ports:
+      - "3000:3000"
