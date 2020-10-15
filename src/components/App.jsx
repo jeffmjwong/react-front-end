@@ -10,6 +10,14 @@ const App = () => {
       .catch(err => console.log(`Something went wrong! ${err}`))
   }, []);
 
+  const showNodeVersion = () => {
+    console.log(process.env.NODE_VERSION);
+  }
+
+  const showAbc = () => {
+    console.log(process.env.ABC);
+  }
+
   return (
     <div>
       <h2>Hello world!</h2>
@@ -20,6 +28,10 @@ const App = () => {
           </p>
         </div>
       ))}
+
+      <button onClick={showNodeVersion}>Click here to see node version</button>
+
+      <button onClick={showAbc}>Click here to see ABC</button>
     </div>
   );
 };
