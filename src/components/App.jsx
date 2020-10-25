@@ -4,7 +4,7 @@ const App = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/a")
+    fetch("/a")
       .then(res => res.json())
       .then(data => setCars(data))
       .catch(err => console.log(`Something went wrong! ${err}`))
