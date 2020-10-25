@@ -10,8 +10,6 @@ RUN npm run build
 
 FROM node:12.19.0-alpine3.12
 
-# USER jeff
-
 WORKDIR /app
 
 COPY --from=build /app-build/dist ./dist
